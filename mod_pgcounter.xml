@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="administrator">
+	<name>mod_pgcounter</name>
+	<author>Fabricio Farias</author>
+	<creationDate>November 2013</creationDate>
+	<copyright>Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>fabriciorelicario@gmail.com</authorEmail>
+	<authorUrl>www.isgh.org.br</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_PGCOUNTER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_pgcounter">mod_pgcounter.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_pgcounter.xml</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_pgcounter.ini</language>
+		<language tag="pt-BR">pt-BR.mod_pgcounter.ini</language>
+	</languages>
+
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_PGCOUNTER_HTML" />
+	<config>
+                
+            
+		<fields name="params">
+                        <fieldset name="connection" label="MOD_BIRTHDATE_FIELDSET_CONNECTION_LABEL">
+
+                            <field name="spacer1" type="spacer" class="text"
+                                        label="MOD_BIRTHDATE_MODULE_CONNECTION_LABEL" />
+
+                             <field
+                                        name="mod_host"
+                                        type="text"
+                                        label="MOD_BIRTHDATE_HOST_FIELD_LABEL"
+                                        description="MOD_BIRTHDATE_HOST_FIELD_DESC" />
+                             <field
+                                        name="mod_port"
+                                        type="text"
+                                        label="MOD_BIRTHDATE_PORT_FIELD_LABEL"
+                                        description="MOD_BIRTHDATE_PORT_FIELD_DESC" />
+                             <field
+                                        name="mod_dbname"
+                                        type="text"
+                                        label="MOD_BIRTHDATE_DBNAME_FIELD_LABEL"
+                                        description="MOD_BIRTHDATE_DBNAME_FIELD_DESC" />
+                             <field
+                                        name="mod_user"
+                                        type="text"
+                                        label="MOD_BIRTHDATE_USER_FIELD_LABEL"
+                                        description="MOD_BIRTHDATE_USER_FIELD_DESC" />
+                             <field
+                                        name="mod_password"
+                                        type="password"
+                                        label="MOD_BIRTHDATE_PASSWORD_FIELD_LABEL"
+                                        description="MOD_BIRTHDATE_PASSWORD_FIELD_DESC" />
+
+                        </fieldset>
+                        
+			<fieldset name="basic">
+                            <field
+					name="moduletime_speed"
+					type="text"
+					label="MOD_PGCOUNTER_MODULETIME_SPEED_LABEL"
+					description="MOD_PGCOUNTER_MODULETIME_SPEED_DESC" />
+                            
+                            <field
+					name="theme"
+					type="radio"
+					label="MOD_PGCOUNTER_MODULETHEME_LABEL"
+					description="MOD_PGCOUNTER_MODULETHEME_DESC"
+					default="blue">
+					<option
+						value="blue">JBlue</option>
+					<option
+						value="white">JWhite</option>
+				</field>
+
+			</fieldset>
+                        
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
